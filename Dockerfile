@@ -1,5 +1,5 @@
 # Build stage
-FROM maven:latest
+FROM maven:latest as build
 WORKDIR /app
 COPY . .
 RUN mvn clean package -DskipTests
